@@ -1,0 +1,10 @@
+version: 1.0.0
+files:
+  - url: ElectronReact-1.0.0-mac.zip
+    sha512: blE2AIYV8ijH2Gz+b8IPtFNGwtdHHJ9FMAnxRonVaFOAKesnu39XAWnMU6EVLKVZhp3wjfF6hQquL8oNCX4A9w==
+  - url: ElectronReact-1.0.0.dmg
+    sha512: YMN6Hdh7JF8uIjA4XbRxgowKd/rVHgvad32t+oyrqQuv3Wy8/DpKQKw8tQBVjli7xaSSUqEnDGlsWNkjP2OEbw==
+    size: 50176164
+path: ElectronReact-1.0.0-mac.zip
+sha512: blE2AIYV8ijH2Gz+b8IPtFNGwtdHHJ9FMAnxRonVaFOAKesnu39XAWnMU6EVLKVZhp3wjfF6hQquL8oNCX4A9w==
+releaseDate: '2018-10-09T21:03:55.971Z'

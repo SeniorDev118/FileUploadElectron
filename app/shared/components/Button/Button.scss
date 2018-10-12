@@ -1,0 +1,35 @@
+.button {
+  color: var(--white);
+  background: var(--purple);
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  padding: 5px 15px;
+  line-height: 1.5;
+  border-radius: 2px;
+  border: 1px solid var(--purple);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.fullSize {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.link {
+  background: none;
+  border: none;
+  padding: 0;
+}

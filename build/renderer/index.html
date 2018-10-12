@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <link rel="stylesheet" type="text/scss" href="public/styles/main.scss">
+    <link rel="stylesheet" type="text/scss" href="public/styles/config.scss">
+    
+    <style>
+      body {
+        background-color: #171717;
+        overflow: hidden;
+      }	
+      button {
+        -webkit-app-region: no-drag;
+      }
+      .style_titlebar{
+        -webkit-app-region: drag;
+      }
+    </style>
+    <script>
+      (function() {
+        if (!process.env.HOT) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = './dist/style.css';
+          // HACK: Writing the script path should be done with webpack
+          document.getElementsByTagName('head')[0].appendChild(link);
+        }
+      }());
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="image"></div>
+    <div id="tooltip"></div>
+    <div id="prompt"></div>
+    
+    <script src="./index.js" data-container="#app"></script>
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script>
+      if (process.env.BROWSER_SYNC_CLIENT_URL) {
+        const current = document.currentScript;
+        const script = document.createElement('script');
+        script.src = process.env.BROWSER_SYNC_CLIENT_URL;
+        script.async = true;
+        current.parentNode.insertBefore(script, current);
+      }
+    </script>
+  </body>
+</html>

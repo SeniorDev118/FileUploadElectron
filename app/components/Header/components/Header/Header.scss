@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: var(--headerHeight);
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  margin-right: -15px;
+  margin-left: -15px;
+  color: var(--white);
+  background: var(--lightBgGrey);
+}
+
+.headerSearch {
+  font-size: 14px;
+  display: inline-block;
+  width: 350px;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.profileButton {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  padding-left: 20px;
+  padding-top: 10px;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+}

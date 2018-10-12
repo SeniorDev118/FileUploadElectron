@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" type="text/scss" href="public/styles/config.scss">
+
+  <script>
+    function onOpenWindow() {
+      const { ipcRenderer } = require('electron')
+      ipcRenderer.send('show-window', 'an-argument');
+    }
+
+    function onSignOut() {
+      const { ipcRenderer } = require('electron')
+      ipcRenderer.send('signout-window', 'an-argument');
+    }
+
+    function onQuit() {
+      const { ipcRenderer } = require('electron')
+      ipcRenderer.send('quit-app', 'an-argument');
+    }
+  </script>
+</head>
+<style>
+  body {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-family: 'HelveticaNeue-Roman', helvetica;
+  }
+
+  #react-root {
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .tray-menu {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  .tray-menu li {
+    color: #fff;
+    list-style: none;
+    background-color: rgb(20, 20, 20);
+    border-bottom: 2px solid rgb(62, 62, 62);
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 10px 15px;
+    margin: 0;
+  }
+
+  .tray-menu li:hover {
+    opacity: 0.98;
+  }
+
+  .tray-menu li:last-child {
+    list-style: none;
+    border: none !important;
+  }
+</style>
+
+<body>
+  <div id='react-root'>
+    <ul class="tray-menu">
+      <li onClick="javascript:onOpenWindow()">Open Alchemy</li>
+      <li onClick="javascript:onSignOut()">Sign out</li>
+      <li onClick="javascript:onQuit()">Quit</li>
+    </ul>
+  </div>
+  <script>
+      // var bundlePath = '../../browser-app/dist/js/tray.js';
+
+      // if (process.env.NODE_ENV === 'development') {
+      //   bundlePath = 'http://localhost:8080/browser-app/dist/js/tray.js';
+      // }
+
+      // var js_script = document.createElement('script');
+      // js_script.src = bundlePath;
+      // js_script.async = true;
+      // document.body.appendChild(js_script);
+  </script>
+</body>
+
+</html>
